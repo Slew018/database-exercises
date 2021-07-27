@@ -1,15 +1,18 @@
 USE codeup_test_db;
 
-CREATE TABLE IF NOT EXISTS albums (
+DROP TABLE IF EXISTS albums;
+
+CREATE TABLE albums (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    artist CHAR (50),
-    name CHAR (100) NOT NULL,
-    release_date INT,
+    artist VARCHAR (50) NOT NULL,
+    name VARCHAR (100) NOT NULL,
+    release_date INT NOT NULL,
     sales FLOAT,
-    genre CHAR (50),
+    genre VARCHAR (50),
     PRIMARY KEY (id)
 );
 
+DESCRIBE albums;
 -- id — auto-incrementing unsigned integer primary key
 -- artist — string for storing the recording artist name
 -- name — string for storing a record name
