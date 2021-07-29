@@ -35,4 +35,4 @@ WHERE last_name LIKE 'E%'
 SELECT count(*)
 FROM employees.employees
 WHERE last_name LIKE '%q%'
-  AND last_name NOT LIKE '%qu%';
+AND last_name NOT LIKE '%qu%';
