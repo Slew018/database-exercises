@@ -22,3 +22,21 @@ SELECT CONCAT(
                 UNIX_TIMESTAMP() - UNIX_TIMESTAMP('2014-02-04'),
                 ' seconds'
            );
+
+-- GROUP BY
+SELECT DISTINCT type from animals;
+
+SELECT type FROM animals GROUP BY type;
+
+SELECT name FROM animals ORDER BY type;
+
+-- Select all animals but display only the types of animals without repeating
+
+-- AGGREGATE
+
+SELECT name,
+COUNT(name)
+FROM animals
+WHERE name
+NOT LIKE '%s%'
+GROUP BY age;
